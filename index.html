@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            text-align: center;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login / Register</h1>
+        <form action="/register" method="post">
+            <h2>Register</h2>
+            <label for="registerUsername">Email:</label>
+            <input type="text" id="registerUsername" name="username" required>
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" name="password" required>
+            <button type="submit">Register</button>
+        </form>
+        <form action="/login" method="post">
+            <h2>Login</h2>
+            <label for="loginUsername">Email:</label>
+            <input type="text" id="loginUsername" name="username" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="message">
+            <p>Already registered? <a href="/login">Login here</a></p>
+            <p>New user? <a href="/register">Register here</a></p>
+        </div>
+    </div>
+</body>
+</html>
